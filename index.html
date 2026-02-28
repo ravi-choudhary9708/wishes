@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Muskan 🎂</title>
+  <meta name="description" content="A special birthday tribute for the most wonderful sister in the world." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ░░ FILM GRAIN OVERLAY ░░ -->
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- ░░ CURSOR TRAIL ░░ -->
+  <div class="cursor-trail" id="cursorTrail"></div>
+
+  <!-- ========================================================
+       SECTION 1 — HERO
+  ======================================================== -->
+  <section class="hero" id="hero">
+
+    <!-- Bokeh particles canvas -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Vignette -->
+    <div class="vignette" aria-hidden="true"></div>
+
+    <!-- Floating sparkles -->
+    <div class="sparkles-container" id="sparklesContainer" aria-hidden="true"></div>
+
+    <!-- Photo -->
+    <div class="hero-photo-wrap">
+      <div class="hero-photo-frame">
+        <img src="public/muskan1.jpg" alt="Muskan — Birthday Star" class="hero-photo" />
+        <div class="photo-glow"></div>
+      </div>
+    </div>
+
+    <!-- Hero Text -->
+    <div class="hero-text">
+      <p class="hero-pre-title reveal-line">— for my favourite person —</p>
+      <h1 class="hero-title reveal-title">
+        <span class="line1">Happy Birthday</span>
+        <span class="line2">Muskan<span class="heart-accent">♥</span></span>
+      </h1>
+      <p class="hero-subtitle reveal-subtitle">To my favourite person in the whole world</p>
+      <div class="hero-scroll-cue">
+        <span class="scroll-text">scroll to explore</span>
+        <div class="scroll-arrow">
+          <div class="arrow-dot"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating balloons -->
+    <div class="balloons-container" id="balloonsContainer" aria-hidden="true"></div>
+
+  </section>
+
+  <!-- ░░ SECTION TRANSITION — lens flare ░░ -->
+  <div class="section-transition st-1" aria-hidden="true">
+    <div class="lens-flare"></div>
+  </div>
+
+  <!-- ========================================================
+       SECTION 2 — MEMORIES / GALLERY
+  ======================================================== -->
+  <section class="memories" id="memories">
+
+    <div class="section-header reveal-up">
+      <span class="section-eyebrow">✦ our story ✦</span>
+      <h2 class="section-title">Cherished Memories</h2>
+      <p class="section-sub">Every photo is a forever I never want to forget</p>
+    </div>
+
+    <div class="gallery-grid">
+
+      <!-- Card 1 -->
+      <div class="film-card reveal-card" style="--delay: 0s">
+        <div class="film-card-inner">
+          <div class="film-strip-top"></div>
+          <div class="film-img-wrap">
+            <img src="public/muskan1.jpg" alt="Memory — The Proudest Day" class="film-img" />
+            <div class="film-color-grade"></div>
+            <div class="film-hover-glow"></div>
+          </div>
+          <div class="film-strip-bottom"></div>
+          <div class="film-caption">
+            <span class="caption-num">01</span>
+            <p class="caption-text">The day you made me the proudest brother</p>
+            <span class="caption-year">forever & always</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="film-card reveal-card" style="--delay: 0.18s">
+        <div class="film-card-inner">
+          <div class="film-strip-top"></div>
+          <div class="film-img-wrap">
+            <img src="public/muskan2.jpg" alt="Memory — My Little Star" class="film-img" />
+            <div class="film-color-grade"></div>
+            <div class="film-hover-glow"></div>
+          </div>
+          <div class="film-strip-bottom"></div>
+          <div class="film-caption">
+            <span class="caption-num">02</span>
+            <p class="caption-text">My little star shining brighter every day</p>
+            <span class="caption-year">you & me, always</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Floating hearts decoration -->
+    <div class="floating-hearts" id="floatingHearts" aria-hidden="true"></div>
+
+  </section>
+
+  <!-- ░░ SECTION TRANSITION 2 ░░ -->
+  <div class="section-transition st-2" aria-hidden="true">
+    <div class="light-leak"></div>
+  </div>
+
+  <!-- ========================================================
+       SECTION 3 — HEARTFELT MESSAGE
+  ======================================================== -->
+  <section class="message-section" id="message">
+
+    <div class="message-bg-glow" aria-hidden="true"></div>
+
+    <!-- Floating stars -->
+    <div class="floating-stars" id="floatingStars" aria-hidden="true"></div>
+
+    <div class="message-container">
+      <div class="message-header reveal-up">
+        <span class="section-eyebrow">✦ from my heart ✦</span>
+        <h2 class="section-title message-h2">A Letter For You</h2>
+      </div>
+
+      <div class="message-letter">
+        <div class="letter-decoration top-decoration">
+          <div class="deco-line"></div>
+          <span class="deco-ornament">❧</span>
+          <div class="deco-line"></div>
+        </div>
+
+        <p class="letter-salutation reveal-up">Dear Muskan,</p>
+
+        <div class="typewriter-container reveal-up">
+          <p class="letter-body" id="letterBody">
+            From the very first day you came into this world, you made everything brighter — the kind of brightness no sun could match. Watching you grow has been the greatest privilege of my life; every laugh you gave, every tear I wiped, every time you called my name and ran to me — I keep all of it tucked safely in the warmest corner of my heart.
+            <br /><br />
+            You carry kindness like a superpower and wear your smile like a crown. The world doesn't always deserve someone as pure as you, but the world is so lucky to have you in it. I am luckier still to be your brother.
+            <br /><br />
+            On this special day, I want you to know: every dream you dream is worth chasing, every door you knock will open for you, and no matter where life takes you, I will always be right there — cheering the loudest, loving the most.
+            <br /><br />
+            Happy Birthday, my sunshine. 🌸 May this year be filled with everything your beautiful heart deserves — magic, laughter, love, and every single thing that makes your eyes light up.
+          </p>
+        </div>
+
+        <p class="letter-sign reveal-up">With all my love,<br /><span class="sign-name">Your Bro ❤️</span></p>
+
+        <div class="letter-decoration bottom-decoration">
+          <div class="deco-line"></div>
+          <span class="deco-ornament">❧</span>
+          <div class="deco-line"></div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ░░ SECTION TRANSITION 3 ░░ -->
+  <div class="section-transition st-3" aria-hidden="true"></div>
+
+  <!-- ========================================================
+       SECTION 4 — INTERACTIVE / CELEBRATION
+  ======================================================== -->
+  <section class="celebration-section" id="celebrate">
+
+    <div class="celebration-bg" aria-hidden="true"></div>
+
+    <div class="celebration-container reveal-up">
+      <span class="section-eyebrow">✦ make a wish ✦</span>
+      <h2 class="section-title">Ready to Celebrate?</h2>
+      <p class="celebration-sub">Click below to light up the cake and celebrate!</p>
+
+      <!-- Candle Cake -->
+      <div class="cake-container" id="cakeContainer">
+        <div class="cake-tier tier-3"></div>
+        <div class="cake-tier tier-2"></div>
+        <div class="cake-tier tier-1"></div>
+        <div class="candles-row">
+          <div class="candle" data-lit="false">
+            <div class="candle-body"></div>
+            <div class="flame-wrap">
+              <div class="flame"></div>
+              <div class="flame-glow"></div>
+            </div>
+          </div>
+          <div class="candle" data-lit="false">
+            <div class="candle-body"></div>
+            <div class="flame-wrap">
+              <div class="flame"></div>
+              <div class="flame-glow"></div>
+            </div>
+          </div>
+          <div class="candle" data-lit="false">
+            <div class="candle-body"></div>
+            <div class="flame-wrap">
+              <div class="flame"></div>
+              <div class="flame-glow"></div>
+            </div>
+          </div>
+          <div class="candle" data-lit="false">
+            <div class="candle-body"></div>
+            <div class="flame-wrap">
+              <div class="flame"></div>
+              <div class="flame-glow"></div>
+            </div>
+          </div>
+          <div class="candle" data-lit="false">
+            <div class="candle-body"></div>
+            <div class="flame-wrap">
+              <div class="flame"></div>
+              <div class="flame-glow"></div>
+            </div>
+          </div>
+        </div>
+        <div class="cake-plate"></div>
+      </div>
+
+      <!-- Surprise Button -->
+      <button class="surprise-btn" id="surpriseBtn" aria-label="Play surprise celebration">
+        <span class="btn-icon">🎉</span>
+        <span class="btn-text">Play Surprise!</span>
+        <span class="btn-shimmer"></span>
+      </button>
+
+      <!-- Confetti canvas -->
+      <canvas id="confettiCanvas"></canvas>
+
+    </div>
+
+  </section>
+
+  <!-- ========================================================
+       FOOTER
+  ======================================================== -->
+  <footer class="site-footer">
+    <div class="footer-content reveal-up">
+      <div class="footer-ornament">✦ ✦ ✦</div>
+      <p class="footer-text">
+        Made with <span class="footer-heart" id="footerHeart">❤️</span> and lots of love
+      </p>
+      <p class="footer-name">by your Bro 🌙</p>
+      <p class="footer-year">2026</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
