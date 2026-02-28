@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,14 +10,53 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet" />
 
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
   <!-- ░░ FILM GRAIN OVERLAY ░░ -->
   <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- ░░ BACKGROUND MUSIC ░░ -->
+  <!-- To use your own song: place it in the public/ folder and change the src below -->
+  <audio id="bgMusic" loop preload="auto">
+    <source src="public/music.mp3" type="audio/mpeg" />
+    <!-- Fallback: a free-use gentle piano birthday track via CDN -->
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-9.mp3" type="audio/mpeg" />
+  </audio>
+
+  <!-- ░░ FLOATING MUSIC PLAYER ░░ -->
+  <div class="music-player" id="musicPlayer" aria-label="Music player">
+    <button class="music-btn" id="musicBtn" aria-label="Play/Pause music">
+      <div class="music-icon play-icon" id="playIcon">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M8 5v14l11-7z" />
+        </svg>
+      </div>
+      <div class="music-icon pause-icon" id="pauseIcon" style="display:none">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M6 19h4V5H6zm8-14v14h4V5z" />
+        </svg>
+      </div>
+      <div class="music-bars" id="musicBars" aria-hidden="true">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </button>
+    <div class="music-info">
+      <span class="music-note-icon">🎵</span>
+      <div class="music-title-wrap">
+        <span class="music-title" id="musicTitle">Birthday Song ✨ — For Muskan</span>
+      </div>
+    </div>
+  </div>
 
   <!-- ░░ CURSOR TRAIL ░░ -->
   <div class="cursor-trail" id="cursorTrail"></div>
@@ -157,13 +197,20 @@
 
         <div class="typewriter-container reveal-up">
           <p class="letter-body" id="letterBody">
-            From the very first day you came into this world, you made everything brighter — the kind of brightness no sun could match. Watching you grow has been the greatest privilege of my life; every laugh you gave, every tear I wiped, every time you called my name and ran to me — I keep all of it tucked safely in the warmest corner of my heart.
+            From the very first day you came into this world, you made everything brighter — the kind of brightness no
+            sun could match. Watching you grow has been the greatest privilege of my life; every laugh you gave, every
+            tear I wiped, every time you called my name and ran to me — I keep all of it tucked safely in the warmest
+            corner of my heart.
             <br /><br />
-            You carry kindness like a superpower and wear your smile like a crown. The world doesn't always deserve someone as pure as you, but the world is so lucky to have you in it. I am luckier still to be your brother.
+            You carry kindness like a superpower and wear your smile like a crown. The world doesn't always deserve
+            someone as pure as you, but the world is so lucky to have you in it. I am luckier still to be your brother.
             <br /><br />
-            On this special day, I want you to know: every dream you dream is worth chasing, every door you knock will open for you, and no matter where life takes you, I will always be right there — cheering the loudest, loving the most.
+            On this special day, I want you to know: every dream you dream is worth chasing, every door you knock will
+            open for you, and no matter where life takes you, I will always be right there — cheering the loudest,
+            loving the most.
             <br /><br />
-            Happy Birthday, my sunshine. 🌸 May this year be filled with everything your beautiful heart deserves — magic, laughter, love, and every single thing that makes your eyes light up.
+            Happy Birthday, my sunshine. 🌸 May this year be filled with everything your beautiful heart deserves —
+            magic, laughter, love, and every single thing that makes your eyes light up.
           </p>
         </div>
 
@@ -268,5 +315,7 @@
   </footer>
 
   <script src="script.js"></script>
+  <script src="music.js"></script>
 </body>
+
 </html>
